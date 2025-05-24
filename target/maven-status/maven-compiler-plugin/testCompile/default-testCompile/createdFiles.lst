@@ -1,1 +1,4 @@
-com\a8\AppTest.class
+com\a8\stepDefinitions\LoginStepDefinitions.class
+com\a8\runner\RunCucumberTest.class
+com\a8\locators\LoginLocators.class
+com\a8\actions\LoginActions.class
