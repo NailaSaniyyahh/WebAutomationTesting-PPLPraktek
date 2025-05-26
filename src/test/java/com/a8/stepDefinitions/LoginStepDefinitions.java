@@ -1,11 +1,13 @@
 package com.a8.stepDefinitions;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 // import static org.junit.jupiter.api.Assertions.assertEquals;
 // import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -65,6 +67,12 @@ public class LoginStepDefinitions {
     @Then("User should be able to see navigation bar for bendahara")
     public void user_should_see_navbar_for_bendahara() {
         assertTrue(loginActions.isNavbarDisplayed());
+    }
+
+    @Then("User should be able to see unsuccessful login notification message : Incorrect username or password, please try again!")
+    public void user_sees_unsuccessful_login_message() {
+        String actualMessage = loginActions.getNotificationMessage();
+        assertEquals("Incorrect username or password, please try again!", actualMessage);
     }
 
     @After
