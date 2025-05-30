@@ -1,11 +1,13 @@
 package com.a8.stepDefinitions;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 // import static org.junit.jupiter.api.Assertions.assertEquals;
 // import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -35,11 +37,17 @@ public class LoginStepDefinitions {
     @Given("User has opened the browser")
     public void user_opens_browser() {
         // Browser sudah dibuka di setup()
-    }
-
-    @Given("User navigates to the login page with url {string}")
+    }    @Given("User navigates to the login page with url {string}")
     public void user_navigates_to_login_page(String url) {
         driver.get(url);
+    }
+    
+    @Given("User has not logged in")
+    public void user_has_not_logged_in() {
+        // Pengecekan bahwa halaman login aktif dan belum login
+        String currentUrl = driver.getCurrentUrl();
+        // Just verify we're on the login page, not on the dashboard
+        assertTrue(!currentUrl.contains("dashboard"), "User is already logged in");
     }
 
     @When("User enters username {string} and password {string}")
@@ -65,6 +73,12 @@ public class LoginStepDefinitions {
     @Then("User should be able to see navigation bar for bendahara")
     public void user_should_see_navbar_for_bendahara() {
         assertTrue(loginActions.isNavbarDisplayed());
+    }
+
+    @Then("User should be able to see unsuccessful login notification message : Incorrect username or password, please try again!")
+    public void user_sees_unsuccessful_login_message() {
+        String actualMessage = loginActions.getNotificationMessage();
+        assertEquals("Incorrect username or password, please try again!", actualMessage);
     }
 
     @After

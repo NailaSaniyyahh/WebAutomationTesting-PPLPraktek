@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: com.a8.runner.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.17 s -- in com.a8.runner.RunCucumberTest
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 52.03 s <<< FAILURE! -- in com.a8.runner.RunCucumberTest
+Logout Functionality.Logout Functionality - Check logout is successfull and redirect to login page -- Time elapsed: 20.14 s <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: By.xpath: (//button[@type='button'])[last()] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.31.0', revision: '1ef9f18787*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 137.0.3296.52, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57488}, msedge: {msedgedriverVersion: 137.0.3296.52 (a2540e6888c8..., userDataDir: C:\Users\ADINDA~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57488/devtoo..., se:cdpVersion: 137.0.3296.52, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4c17ec83b2374f1822a225b51787733
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.a8.actions.LogoutActions.clickLogoutButton(LogoutActions.java:22)
+	at com.a8.stepDefinitions.LogoutStepDefinitions.user_clicks_on_the_logout_button(LogoutStepDefinitions.java:33)
+	at ✽.User clicks on the Logout button(classpath:logout.feature:11)
+

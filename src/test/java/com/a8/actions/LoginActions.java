@@ -44,4 +44,9 @@ public class LoginActions {
             return false;
         }
     }
+
+    public String getNotificationMessage() {
+        WebElement notification = wait.until(ExpectedConditions.visibilityOfElementLocated(LoginLocators.ERROR_MESSAGE));
+        return notification.getText();
+    }
 }
