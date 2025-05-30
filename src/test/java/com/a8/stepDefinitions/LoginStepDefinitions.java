@@ -37,11 +37,17 @@ public class LoginStepDefinitions {
     @Given("User has opened the browser")
     public void user_opens_browser() {
         // Browser sudah dibuka di setup()
-    }
-
-    @Given("User navigates to the login page with url {string}")
+    }    @Given("User navigates to the login page with url {string}")
     public void user_navigates_to_login_page(String url) {
         driver.get(url);
+    }
+    
+    @Given("User has not logged in")
+    public void user_has_not_logged_in() {
+        // Pengecekan bahwa halaman login aktif dan belum login
+        String currentUrl = driver.getCurrentUrl();
+        // Just verify we're on the login page, not on the dashboard
+        assertTrue(!currentUrl.contains("dashboard"), "User is already logged in");
     }
 
     @When("User enters username {string} and password {string}")
