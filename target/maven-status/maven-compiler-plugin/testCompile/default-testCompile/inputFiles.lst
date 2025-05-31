@@ -1,7 +1,8 @@
-C:\Users\Adinda Fauzia P\Documents\Semester 6\PPL\WebAutomationTesting-PPLPraktek\src\test\java\com\a8\actions\LoginActions.java
-C:\Users\Adinda Fauzia P\Documents\Semester 6\PPL\WebAutomationTesting-PPLPraktek\src\test\java\com\a8\actions\LogoutActions.java
-C:\Users\Adinda Fauzia P\Documents\Semester 6\PPL\WebAutomationTesting-PPLPraktek\src\test\java\com\a8\locators\LoginLocators.java
-C:\Users\Adinda Fauzia P\Documents\Semester 6\PPL\WebAutomationTesting-PPLPraktek\src\test\java\com\a8\locators\LogoutLocators.java
-C:\Users\Adinda Fauzia P\Documents\Semester 6\PPL\WebAutomationTesting-PPLPraktek\src\test\java\com\a8\runner\RunCucumberTest.java
-C:\Users\Adinda Fauzia P\Documents\Semester 6\PPL\WebAutomationTesting-PPLPraktek\src\test\java\com\a8\stepDefinitions\LoginStepDefinitions.java
-C:\Users\Adinda Fauzia P\Documents\Semester 6\PPL\WebAutomationTesting-PPLPraktek\src\test\java\com\a8\stepDefinitions\LogoutStepDefinitions.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\actions\LoginActions.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\actions\LogoutActions.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\core\DriverManager.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\locators\LoginLocators.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\locators\LogoutLocators.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\runner\RunCucumberTest.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\stepDefinitions\LoginStepDefinitions.java
+D:\KULIAH\SEMESTER 6\PENGUJIAN PERANGKAT LUNAK (P)\Week 12-13\automationtest\src\test\java\com\a8\stepDefinitions\LogoutStepDefinitions.java

@@ -1,9 +1,17 @@
 package com.a8.locators;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LogoutLocators {
-    public static final By LOGOUT_BUTTON = By.xpath("(//button[@type='button'])[last()]");
-    public static final By CONFIRM_LOGOUT_YES_BUTTON = By.xpath("//button[normalize-space(text())='Ya']");
-    public static final By LOGIN_PAGE_ELEMENT = By.cssSelector("form[class*='login-form']");
+
+    @FindBy(css = "button:has(svg.lucide-log-out)")
+    public WebElement LOGOUT_BUTTON;
+
+    @FindBy(xpath = "//button[normalize-space()='Ya']")
+    public WebElement CONFIRM_LOGOUT_YES_BUTTON;
+
+    @FindBy(name = "username")
+    public WebElement LOGIN_PAGE_ELEMENT;
+
 }

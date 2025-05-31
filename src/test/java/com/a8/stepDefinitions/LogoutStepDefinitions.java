@@ -3,17 +3,15 @@ package com.a8.stepDefinitions;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
 import com.a8.actions.LogoutActions;
+import com.a8.core.DriverManager;
 import com.a8.actions.LoginActions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LogoutStepDefinitions {
     private WebDriver driver;
@@ -22,8 +20,7 @@ public class LogoutStepDefinitions {
 
     @Before
     public void setup() {
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        driver = DriverManager.getDriver();
         logoutActions = new LogoutActions(driver);
         loginActions = new LoginActions(driver);
     }
@@ -47,8 +44,6 @@ public class LogoutStepDefinitions {
 
     @After
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        DriverManager.quitDriver();
     }
 }

@@ -5,3 +5,4 @@ com\a8\actions\LogoutActions.class
 com\a8\locators\LogoutLocators.class
 com\a8\stepDefinitions\LoginStepDefinitions.class
 com\a8\locators\LoginLocators.class
+com\a8\core\DriverManager.class

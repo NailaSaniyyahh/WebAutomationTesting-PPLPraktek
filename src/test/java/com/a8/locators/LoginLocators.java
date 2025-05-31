@@ -1,12 +1,22 @@
 package com.a8.locators;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginLocators {
-    //pakai FndBy() untuk menghindari hardcode locator dan WebElement
-    public static final By USERNAME_INPUT = By.name("username");
-    public static final By PASSWORD_INPUT = By.name("password");
-    public static final By LOGIN_BUTTON = By.cssSelector("button[type='submit']");
-    public static final By ERROR_MESSAGE = By.xpath("//p[contains(text(), 'Incorrect username or password')]");
-    public static final By DASHBOARD_NAVBAR = By.xpath("//h1[contains(text(),'Dasbor - Bendahara')]");
+
+    @FindBy(name = "username")
+    public WebElement USERNAME_INPUT;
+
+    @FindBy(name = "password")
+    public WebElement PASSWORD_INPUT;
+
+    @FindBy(css = "button[type='submit']")
+    public WebElement LOGIN_BUTTON;
+
+    @FindBy(xpath = "//p[contains(text(), 'Incorrect username or password')]")
+    public WebElement ERROR_MESSAGE;
+
+    @FindBy(xpath = "//h1[contains(text(),'Dasbor - Bendahara')]")
+    public WebElement DASHBOARD_NAVBAR;
 }
