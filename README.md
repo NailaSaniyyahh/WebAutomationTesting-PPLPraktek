@@ -19,12 +19,10 @@ Proyek ini merupakan Behavior-Driven Development (BDD) test automation suite yan
   Informasi lebih lanjut bisa dilihat di [Kunjungi situs Maven](https://maven.apache.org/).
 
 * **Programming Language** : [![Java](https://img.shields.io/badge/Java-21.0.6%202025--01--21%20LTS-red)](https://www.java.com/)
-
   Versi Java yang kami gunakan adalah Java 21.0.6 2025-01-21 LTS. 
   Untuk informasi lebih lanjut -> [Kunjungi situs Java](https://www.java.com/).
 
 * **Unit Testing** : [![JUnit Jupiter](https://img.shields.io/badge/JUnit%20Jupiter-5.12.2-green)](https://junit.org/)
-
   JUnit membantu kami untuk membuat test script dan menjalankan unit test dalam proyek Java. 
   Versi JUnit yang digunakan adalah JUnit Jupiter 5.12.2. 
   Untuk informasi lebih lanjut -> [Kunjungi situs JUnit](https://junit.org/).
@@ -95,7 +93,7 @@ Selain itu, terdapat detail list skenario yang dijalankan. Misalnya pada skenari
 
 ## Framework & Library Used
 Kami menggunakan beberapa dependency yang digunakan untuk menunjang kebutuhan program kami untuk dapat dijalankan dengan baik, Dependency tersebut antara lain : 
-1. *org.seleniumhq.selenium * 
+1. *org.seleniumhq.selenium* 
     - Untuk mengotomasi interaksi dengan web browser seperti klik tombol, cek elemen, dst yang nantinya akan digunakan oleh file-file actions untuk mengambil dan mengendalikan elemen halaman pada web. 
 2. *io.github.bonigarcia* 
     - Untuk setup driver secara otomatis tanpa harus mendownload driver, digunakan pada DriverManager class untuk inisialisasi driver.
