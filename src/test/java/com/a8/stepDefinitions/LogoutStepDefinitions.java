@@ -4,25 +4,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 
-import com.a8.actions.LogoutActions;
 import com.a8.core.DriverManager;
-import com.a8.actions.LoginActions;
+import com.a8.actions.LogoutActions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class LogoutStepDefinitions {
     private WebDriver driver;
     private LogoutActions logoutActions;
-    private LoginActions loginActions;
 
-    @Before
-    public void setup() {
-        driver = DriverManager.getDriver();
-        logoutActions = new LogoutActions(driver);
-        loginActions = new LoginActions(driver);
+    public LogoutStepDefinitions() {
+        this.driver = DriverManager.getDriver();
+        this.logoutActions = new LogoutActions(driver);
     }
 
     @When("User clicks on the Logout button")
@@ -42,8 +36,4 @@ public class LogoutStepDefinitions {
         assertTrue(logoutActions.isRedirectedToLoginPage(), "User was not redirected to login page");
     }
 
-    @After
-    public void tearDown() {
-        DriverManager.quitDriver();
-    }
 }

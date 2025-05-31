@@ -6,17 +6,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.a8.locators.LogoutLocators;
-import com.a8.locators.LoginLocators;
 
 import java.time.Duration;
 
 public class LogoutActions {
-    private WebDriver driver;
     private WebDriverWait wait;
     private LogoutLocators locators;
 
     public LogoutActions(WebDriver driver) {
-        this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.locators = new LogoutLocators();
         PageFactory.initElements(driver, this.locators);

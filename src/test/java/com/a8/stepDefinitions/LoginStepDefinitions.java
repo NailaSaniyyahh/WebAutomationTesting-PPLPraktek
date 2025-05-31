@@ -5,11 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 
-import com.a8.actions.LoginActions;
 import com.a8.core.DriverManager;
+import com.a8.actions.LoginActions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -18,10 +16,9 @@ public class LoginStepDefinitions {
     private WebDriver driver;
     private LoginActions loginActions;
 
-    @Before
-    public void setup() {
-        driver = DriverManager.getDriver();
-        loginActions = new LoginActions(driver);
+    public LoginStepDefinitions() {
+        this.driver = DriverManager.getDriver();
+        this.loginActions = new LoginActions(driver);
     }
 
     @Given("User has opened the browser")
@@ -63,11 +60,6 @@ public class LoginStepDefinitions {
     public void user_sees_unsuccessful_login_message() {
         String actualMessage = loginActions.getNotificationMessage();
         assertEquals("Incorrect username or password, please try again!", actualMessage);
-    }
-
-    @After
-    public void tearDown() {
-        DriverManager.quitDriver();
     }
 
 }

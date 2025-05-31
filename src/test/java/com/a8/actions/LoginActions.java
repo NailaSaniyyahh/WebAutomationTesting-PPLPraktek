@@ -10,12 +10,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.a8.locators.LoginLocators;
 
 public class LoginActions {
-    private WebDriver driver;
     private WebDriverWait wait;
     private LoginLocators locators;
 
     public LoginActions(WebDriver driver) {
-        this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.locators = new LoginLocators();
         PageFactory.initElements(driver, this.locators);
