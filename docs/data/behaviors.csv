@@ -1,0 +1,5 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","","0","Logout Functionality","1","0","Check logout is successfull and redirect to login page","0"
+"0","","0","Login Functionality","1","0","Check login is unsuccessful with invalid username (username not valid)","0"
+"0","","0","Login Functionality","1","0","Check login is unsuccessful with invalid credentials (password not valid)","0"
+"0","","0","Login Functionality","1","0","Check login is successful with valid credentials as role ""bendahara""","0"

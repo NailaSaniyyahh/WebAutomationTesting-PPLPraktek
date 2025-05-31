@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","10160","Check logout is successfull and redirect to login page","","Sat May 31 16:54:22 ICT 2025","passed","Sat May 31 16:54:32 ICT 2025","","Logout Functionality","Check logout is successfull and redirect to login page",""
+"","9604","Check login is unsuccessful with invalid username (username not valid)","","Sat May 31 16:54:03 ICT 2025","passed","Sat May 31 16:54:12 ICT 2025","","Login Functionality","Check login is unsuccessful with invalid username (username not valid)",""
+"","9625","Check login is unsuccessful with invalid credentials (password not valid)","","Sat May 31 16:54:12 ICT 2025","passed","Sat May 31 16:54:22 ICT 2025","","Login Functionality","Check login is unsuccessful with invalid credentials (password not valid)",""
+"","10556","Check login is successful with valid credentials as role ""bendahara""","","Sat May 31 16:53:52 ICT 2025","passed","Sat May 31 16:54:02 ICT 2025","","Login Functionality","Check login is successful with valid credentials as role ""bendahara""",""
